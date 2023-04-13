@@ -24,14 +24,23 @@ import Posts from "./components/posts/Posts";
 import FullPost from "./components/fullPost/fullPost";
 import {useState} from "react";
 import Flights from "./components/flights/flights";
+import Users from "./components/users/users";
+import AllPosts from "./components/allPosts/allPosts";
 
 const App = () => {
 
     let [chosenPost, setChosenPost] = useState(null);
 
+    let [userId, setUserId] = useState(null);
+
+
+
+
     const lift =(obj) => {
         setChosenPost({...obj});
     }
+
+
 
   return (
 
@@ -63,6 +72,15 @@ const App = () => {
                   <Flights/>
               </div>
 
+          }
+
+
+              <Users setUserId={setUserId}/>
+
+          {
+              userId
+              &&
+              <AllPosts userId={userId}/>
           }
 
     </div>
