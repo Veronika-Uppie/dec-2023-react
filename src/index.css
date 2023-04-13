@@ -24,3 +24,12 @@ code {
   border: 1px solid black;
 
 }
+
+.main{
+  display: flex;
+  flex-direction: column;
+}
+
+img{
+  width: 50px;
+}

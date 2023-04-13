@@ -23,6 +23,7 @@
 import Posts from "./components/posts/Posts";
 import FullPost from "./components/fullPost/fullPost";
 import {useState} from "react";
+import Flights from "./components/flights/flights";
 
 const App = () => {
 
@@ -33,6 +34,10 @@ const App = () => {
     }
 
   return (
+
+      <div className={'main'}>
+
+
     <div className={'container'}>
 
 
@@ -50,7 +55,15 @@ const App = () => {
             </div>)
         }
 
+    </div>
 
+          {
+
+              <div>
+                  <Flights/>
+              </div>
+
+          }
 
     </div>
   );
