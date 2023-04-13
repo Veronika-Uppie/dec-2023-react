@@ -21,12 +21,35 @@
 
 
 import Posts from "./components/posts/Posts";
+import FullPost from "./components/fullPost/fullPost";
+import {useState} from "react";
 
-function App() {
+const App = () => {
+
+    let [chosenPost, setChosenPost] = useState(null);
+
+    const lift =(obj) => {
+        setChosenPost({...obj});
+    }
+
   return (
-    <div>
+    <div className={'container'}>
 
-      <Posts/>
+
+        <div className={'left-side'}>
+            <Posts lift = {lift}/>
+
+        </div>
+
+
+        {
+            chosenPost
+            &&
+            (<div className={'right-side'}>
+                <FullPost value={chosenPost}/>
+            </div>)
+        }
+
 
 
     </div>
