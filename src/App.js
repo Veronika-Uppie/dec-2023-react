@@ -8,10 +8,14 @@
 
 
 
+import Users from "./components/users/Users";
+
 const App = () => {
 
   return (
-        <div></div>
+        <div>
+          <Users/>
+        </div>
   );
 }
 
