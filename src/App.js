@@ -9,12 +9,14 @@
 
 
 import Users from "./components/users/Users";
+import Cars from "./components/Cars/Cars";
 
 const App = () => {
 
   return (
         <div>
-          <Users/>
+          {/*<Users/>*/}
+            {<Cars/>}
         </div>
   );
 }
